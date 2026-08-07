@@ -1,0 +1,6 @@
+Flesh out features
+    
+Build out System dependincies
+    Nvidia drivers & compat flags
+    
+Create "addons" that bundle features

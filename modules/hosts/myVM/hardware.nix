@@ -1,6 +1,6 @@
 { self, inputs, ... }: {
 
-	flake.nixosModules.myMachineHardware = { config, lib, pkgs, modulesPath, ... }: {
+	flake.nixosModules.myVMHardware = { config, lib, pkgs, modulesPath, ... }: {
   		imports = [ 
 			(modulesPath + "/installer/scan/not-detected.nix")
 		];
@@ -17,7 +17,7 @@
 
   		swapDevices = [ ];
 
-		nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+			nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   		virtualisation.virtualbox.guest.enable = true;
 	};
 }

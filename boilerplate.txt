@@ -1,0 +1,19 @@
+{	self, inputs, ... }: {
+
+  flake.nixosModules.NAME = { pkgs, self',	inputs', ... }: {
+    imports = modules;
+    programs.NAME = {
+      enable = true;
+      package = self.packages.${pkgs.stdenv.hostPlatform.system}.myPACKAGE;
+    };
+  };
+
+  perSystem = { pkgs, lib, self', ... }: {
+    packages.myPACKAGE = inputs.wrapper-modules.wrappers.NAME.wrap {
+      inherit pkgs;
+      settings = {
+
+      };
+    };
+  };
+}

@@ -4,7 +4,8 @@
   ...
 }: {
   flake.nixosModules.gaming = moduleWithSystem ({ 
-    pkgs, 
+    pkgs,
+    unfreePkgs,
     ... 
   }: {...}: let
     modules = with self.nixosModules; [
@@ -12,11 +13,11 @@
     ];
   in {
     imports = modules;
-
-    environment.systemPackages = with pkgs; [
-      prismlauncher
-      everest
-      r2modman      
+    environment.systemPackages = [
+      pkgs.prismlauncher
+      pkgs.olympus
+      pkgs.r2modman
+      unfreePkgs.discord
     ]; 
   });
 }

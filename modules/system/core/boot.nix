@@ -9,7 +9,6 @@
     ...
   }: {
     boot = {
-
       loader = {
         timeout = 5;
         efi.efiSysMountPoint = "/boot";
@@ -26,7 +25,6 @@
         enable = true;
         theme = "catppuccin-mocha";
         themePackages = with pkgs; [
-          # By default we would install all themes
           (catppuccin-plymouth.override {
             variant = "mocha";
           })

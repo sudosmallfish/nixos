@@ -3,11 +3,13 @@
   moduleWithSystem,
   ...
 }: {
-  flake.nixosModules.office = moduleWithSystem ({pkgs, ...}: {
-    environment.systemPackages = with pkgs; [
-      libreoffice
-      thunderbird
+  flake.nixosModules.office = moduleWithSystem ({pkgs, unfreePkgs, ...}: {
+    environment.systemPackages = [
+      pkgs.libreoffice
+      pkgs.thunderbird
+      unfreePkgs.obsidian
+     ]; 
 
-    ];
+    
   });
 }

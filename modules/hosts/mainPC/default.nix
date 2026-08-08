@@ -1,8 +1,15 @@
 { self, inputs, ... }: {
 
 	flake.nixosConfigurations.mainPC = inputs.nixpkgs.lib.nixosSystem {
-		modules = [
-			self.nixosModules.mainPC-Configuration
+		modules = with self.nixosModules; [
+			mainPC-Configuration
+			core
+			nvidiaDrivers
+			bottles
+			gaming
+			programming
+			office
+			kitty
 		];
 	};
 }

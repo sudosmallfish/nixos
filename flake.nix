@@ -2,6 +2,7 @@
   inputs = {
     
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
+    nixunst.url = "github:nixos/nixpkgs/nixos-unstable";
 
     otter-launcher = {
       url = "github:kuokuo123/otter-launcher";
@@ -9,6 +10,10 @@
     };
     woomer = {
       url = "github:coffeeispower/woomer";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    spotx-nix = {
+      url = "github:SpotX-Official/SpotX-Nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

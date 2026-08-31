@@ -12,6 +12,8 @@
       playerctl
       pavucontrol
 			pulseaudioFull
+      pulsemeeter
+
     ];
     
     services.pulseaudio.enable = false;

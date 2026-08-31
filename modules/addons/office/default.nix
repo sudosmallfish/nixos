@@ -4,11 +4,10 @@
   ...
 }: {
   flake.nixosModules.office = moduleWithSystem ({pkgs, unfreePkgs, ...}: {
-    environment.systemPackages = [
-      pkgs.libreoffice
-      pkgs.thunderbird
-      unfreePkgs.obsidian
+    environment.systemPackages = with pkgs; [
+      libreoffice
      ]; 
+    programs.thunderbird.enable = true;
 
     
   });

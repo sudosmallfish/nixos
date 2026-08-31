@@ -4,20 +4,18 @@
     ...
 }: {
     flake.nixosModules.extra = moduleWithSystem ({ 
-    pkgs, 
-    ... 
-  }: {...}: let
-    modules = with self.nixosModules; [
-      woomer
-      otter-launcher
-    ];
-  in {
-    imports = modules;
+      pkgs, 
+      ... 
+    }: {
+    programs.localsend.enable = true;
+    programs.dms-shell.enableAudioWavelength = true;
+
     environment.systemPackages = with pkgs; [
       fastfetch
       cava
+      kurve
       htop
-
+      mpv
     ]; 
   });
 }

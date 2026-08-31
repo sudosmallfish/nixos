@@ -10,7 +10,7 @@
   }: let
   in {
     fonts.packages = with pkgs.nerd-fonts; [
-      fira-mono
+      space-mono
     ];
     environment.systemPackages = with pkgs; [
       bibata-cursors
@@ -27,7 +27,7 @@
         settings = {
           "org/gnome/desktop/interface" = {
             cursor-theme = "Bibata-Modern-Ice";
-            font-name = "FiraMono Nerd Font 11";
+            font-name = "SpaceMono Nerd Font 11";
           };
         };
       }

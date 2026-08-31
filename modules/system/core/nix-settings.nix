@@ -4,6 +4,9 @@
       inherit system;
       config.allowUnfree = true;
     };
+    _module.args.unstPkgs = import inputs.nixunst {
+      inherit system;
+    };
   };
   flake.nixosModules.nix = {...}: {
     nix = {

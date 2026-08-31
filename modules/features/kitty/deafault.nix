@@ -12,9 +12,9 @@
   );
   perSystem = {pkgs, ...}: {
     packages.kitty = let
-      fira-mono = pkgs.nerd-fonts.fira-mono;
+      space-mono = pkgs.nerd-fonts.space-mono;
       fontsConf = pkgs.makeFontsConf {
-        fontDirectories = [fira-mono];
+        fontDirectories = [space-mono];
       };
     in
       inputs.wrappers.wrappers.kitty.wrap {
@@ -23,11 +23,11 @@
           "FONTCONFIG_FILE" = "${fontsConf}";
         };
         font = {
-          name = "FiraMono Nerd Font Mono";
+          name = "SpaceMono Nerd Font Mono";
           size = 11;
         };
         settings = {
-          font_size = 11;
+          font_size = 10;
           scrollbar = "never";
           pixel_scroll = false;
           window_padding_width = 9;
@@ -36,7 +36,7 @@
           enable_audio_bell = false;
           cursor_trail = 1;
           cursor_trail_start_threshold = 1;
-          cursor_trail_color = "#cba6f7";
+          cursor_trail_color = "#931a7a";
           cursor_shape = "beam";
           allow_remote_control = false;
         };

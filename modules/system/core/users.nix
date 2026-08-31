@@ -1,4 +1,3 @@
-# DO NOT PUSH TO GITHUB!!!
 {
   self,
   inputs,
@@ -10,19 +9,20 @@
     ...
   }: let
     modules = with self.nixosModules; [
-      zsh
+      fish
     ];
   in {
     imports = modules;
     users.users.reece = {
       isNormalUser = true;     
       description = "reece";
-      shell = pkgs.zsh;
+      shell = pkgs.fish;
       extraGroups = [ "root" "wheel" ];
       packages = with pkgs; [
 				kdePackages.kate
 				keepassxc
 			];
     };
+    
   };
 }

@@ -13,11 +13,10 @@
     ];
   in {
     imports = modules;
-    environment.systemPackages = [
-      pkgs.prismlauncher
-      pkgs.olympus
-      pkgs.r2modman
-      unfreePkgs.discord
+    environment.systemPackages = with pkgs; [
+      prismlauncher
+      olympus
+      r2modman
     ]; 
   });
 }

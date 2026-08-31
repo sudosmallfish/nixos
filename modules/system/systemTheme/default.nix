@@ -10,7 +10,6 @@
     ...
   }: let
     modules = with self.nixosModules; [
-      bibataCursors
       catppuccinGtk
     ];
   in {

@@ -39,6 +39,7 @@
           cursor_trail_color = "#931a7a";
           cursor_shape = "beam";
           allow_remote_control = false;
+          startup_session = "fastfetch";
         };
         keybindings = {
           "ctrl+backspace" = "send_text all \\x17";

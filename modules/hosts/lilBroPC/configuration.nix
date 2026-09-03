@@ -5,7 +5,7 @@
 	... 
 }: {
 
-	flake.nixosModules.mainPC-Configuration = {pkgs, ... }:
+	flake.nixosModules.lilBroPC-Configuration = {pkgs, ... }:
 	let
 		modules = with self.nixosModules; [ fish ];
 	in {
@@ -22,15 +22,13 @@
 			overlays = [ inputs.spotx-nix.overlays.default ];		
 		};
 
-		networking.hostName = "mainPC";
+		networking.hostName = "lilBroPC";
 		networking.networkmanager.enable = true;
 		environment.systemPackages = with pkgs; [
 			librewolf
 			sddm-astronaut
 			brave
 			foliate
-			transmission_4
-			transmission_4-qt
 			(pkgs.spotify-spotx.override {
 				spotxArgs = [
 				"-h"
@@ -49,13 +47,12 @@
 			theme = "sddm-astronaut-theme";
 			extraPackages = [ pkgs.sddm-astronaut ];
 		};
-
 		services.desktopManager.plasma6.enable = true;
 
 		imports = modules;
 		users.users.reece = {
 			isNormalUser = true;
-			description = "your configuration";
+			description = "reece";
 			shell = pkgs.fish;
 			extraGroups = [ "root" "wheel" ];
 			packages = with pkgs; [

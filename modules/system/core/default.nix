@@ -8,7 +8,6 @@
     ...
   }: let
     modules = with self.nixosModules; [
-      user
       bootloader
       nix
       hardware

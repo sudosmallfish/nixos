@@ -11,7 +11,7 @@
 
     programs.fish = {
       enable = true;
-      shellInit = "fastfetch";
+      shellInit = "";
       interactiveShellInit = ''
         set fish_greeting # Disable greeting
       '';

@@ -12,7 +12,6 @@
       winetricks
       wine
       wine64
-      wine-wayland
       freetype
     ];
   });

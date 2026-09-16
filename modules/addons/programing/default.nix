@@ -6,7 +6,6 @@
 }: {
   flake.nixosModules.programming = moduleWithSystem ({pkgs, inputs', ...}: {
     environment.systemPackages = with pkgs; [
-      vscodium
       neovim
       git
       gnumake 
@@ -19,6 +18,6 @@
     ];
 
     programs.neovim.defaultEditor = true;
-
+    environment.variables.EDITOR = "";
   });
 }

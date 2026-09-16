@@ -5,7 +5,7 @@
 	... 
 }: {
 
-	flake.nixosModules.mainPC-Configuration = {pkgs, ... }:
+	flake.nixosModules.toastPC-Configuration = {pkgs, ... }:
 	let
 		modules = with self.nixosModules; [ fish ];
 	in {
@@ -25,42 +25,33 @@
 		networking.hostName = "mainPC";
 		networking.networkmanager.enable = true;
 		environment.systemPackages = with pkgs; [
-			librewolf
-			sddm-astronaut
 			brave
-			foliate
-			transmission_4
-			transmission_4-qt
 			(pkgs.spotify-spotx.override {
 				spotxArgs = [
 				"-h"
+				"-p"
 				];
 			})
 		];
 
-		services.printing = {
-			enable = true;
-			browsed.enable = true;
-		};
-
 		services.displayManager.sddm = {
 			enable = true;
 			autoNumlock = true;
-			theme = "sddm-astronaut-theme";
+			theme = "sddm-black_hole-theme";
 			extraPackages = [ pkgs.sddm-astronaut ];
 		};
 
 		services.desktopManager.plasma6.enable = true;
 
 		imports = modules;
-		users.users.reece = {
+		users.users.toaster = {
 			isNormalUser = true;
-			description = "Reece";
+			description = "A Random Toaster";
 			shell = pkgs.fish;
 			extraGroups = [ "root" "wheel" ];
 			packages = with pkgs; [
 				keepassxc
-				secretspec
+				vscoduim
 			];
 		};
 	};

@@ -16,6 +16,7 @@
       kurve
       htop
       mpv
+      qalculate-qt
     ]; 
   });
 }

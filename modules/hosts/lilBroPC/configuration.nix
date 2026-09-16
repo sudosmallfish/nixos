@@ -50,9 +50,9 @@
 		services.desktopManager.plasma6.enable = true;
 
 		imports = modules;
-		users.users.reece = {
+		users.users.trace = {
 			isNormalUser = true;
-			description = "reece";
+			description = "Trace";
 			shell = pkgs.fish;
 			extraGroups = [ "root" "wheel" ];
 			packages = with pkgs; [

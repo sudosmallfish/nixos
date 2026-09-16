@@ -20,7 +20,7 @@
       ]
       ++ modules;
     services = {
-      openssh.enable = false;
+      openssh.enable = true;
       avahi.enable = false;
     };
     environment.systemPackages = with pkgs; [

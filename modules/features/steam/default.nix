@@ -4,6 +4,7 @@
   }: {
   flake.nixosModules.steam = moduleWithSystem ({ 
     pkgs, 
+    unstPkgs,
     unfreePkgs,
     lib, 
     ... 
@@ -11,8 +12,8 @@
     programs.steam = {
       enable = true;
       protontricks.enable = true;
-      extraCompatPackages = with pkgs; [
-        proton-ge-bin
+      extraCompatPackages = [
+        unstPkgs.proton-ge-bin
       ];
     };
   });

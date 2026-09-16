@@ -1,14 +1,13 @@
 { self, inputs, ... }: {
 
-	flake.nixosConfigurations.mainPC = inputs.nixpkgs.lib.nixosSystem {
+	flake.nixosConfigurations.toastPC = inputs.nixpkgs.lib.nixosSystem {
 		modules = with self.nixosModules; [
-			mainPC-Configuration
+			toastPC-Configuration
 			audio
 			core
 			nvidiaDrivers
 			bottles
 			gaming
-			programming
 			office
 			kitty
 			network

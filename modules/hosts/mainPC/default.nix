@@ -15,7 +15,7 @@
 			unfree
 			extra
 			starship
-			recording
+			myNiri
 		];
 	};
 }

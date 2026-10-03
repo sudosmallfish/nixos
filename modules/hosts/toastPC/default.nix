@@ -5,10 +5,10 @@
 			toastPC-Configuration
 			audio
 			core
-			programing
 			nvidiaDrivers
 			bottles
 			gaming
+			programming
 			office
 			kitty
 			network
@@ -16,7 +16,6 @@
 			extra
 			starship
 			recording
-			toast
 		];
 	};
 }

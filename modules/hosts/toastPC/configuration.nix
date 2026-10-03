@@ -60,5 +60,18 @@
 				vesktop	
 			];
 		};
+		networking.firewall = {
+			enable = true;
+			allowedTCPPorts = [
+				27036
+				27037
+			];
+			allowedUDPPorts = [
+				27031
+				27036
+				10400
+				10401
+			]; 
+		};
 	};
 }

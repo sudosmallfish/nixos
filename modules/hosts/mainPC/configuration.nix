@@ -50,6 +50,12 @@
 			extraPackages = [ pkgs.sddm-astronaut ];
 		};
 
+		console.useXkbConfig = true;
+		services.xserver.xkb = {
+		  layout = "us";
+		  variant = "dvp";
+		};
+
 		services.desktopManager.plasma6.enable = true;
 
 		imports = modules;

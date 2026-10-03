@@ -31,7 +31,7 @@
         ];
       };
 
-      kernelPackages = pkgs.linuxPackages;
+      kernelPackages = pkgs.linuxPackages_7_2;
 
     };
   };

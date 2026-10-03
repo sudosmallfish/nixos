@@ -17,6 +17,7 @@
       htop
       mpv
       qalculate-qt
+      gparted-full
     ]; 
   });
 }

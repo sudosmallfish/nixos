@@ -58,6 +58,7 @@
 				keepassxc
 				vscodium
 				vesktop	
+				wireless-regdb
 			];
 		};
 		networking.firewall = {

@@ -61,6 +61,7 @@
 			packages = with pkgs; [
 				keepassxc
 				secretspec
+				tor-browser
 			];
 		};
 	};

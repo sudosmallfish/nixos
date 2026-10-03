@@ -8,14 +8,14 @@
 			nvidiaDrivers
 			bottles
 			gaming
-			programming
+			programing
 			office
 			kitty
 			network
 			unfree
 			extra
 			starship
-			myNiri
+			niri
 		];
 	};
 }

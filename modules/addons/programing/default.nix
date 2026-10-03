@@ -4,7 +4,7 @@
   inputs',
   ...
 }: {
-  flake.nixosModules.programming = moduleWithSystem ({pkgs, inputs', ...}: {
+  flake.nixosModules.programing = moduleWithSystem ({pkgs, inputs', ...}: {
     environment.systemPackages = with pkgs; [
       neovim
       git
@@ -15,6 +15,10 @@
       tree-sitter
       unzip
       xclip
+      wl-clipboard
+      lua-language-server
+      nixd
+      stylua
     ];
 
     programs.neovim.defaultEditor = true;

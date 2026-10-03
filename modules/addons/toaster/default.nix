@@ -3,8 +3,8 @@
   moduleWithSystem,
   ...
 }: {
-	flake.nixosModules.toast = moduleWithSystem ({pkgs, ...}: {
-		environment.systemPackages = with pkgs; [
+	flake.nixosModules.toast = moduleWithSystem ({unfreePkgs, ...}: {
+		environment.systemPackages = with unfreePkgs; [
 			wayvr
 			unityhub
 			blender

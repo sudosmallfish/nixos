@@ -5,6 +5,7 @@
 			toastPC-Configuration
 			audio
 			core
+			programing
 			nvidiaDrivers
 			bottles
 			gaming
@@ -15,6 +16,7 @@
 			extra
 			starship
 			recording
+			toast
 		];
 	};
 }

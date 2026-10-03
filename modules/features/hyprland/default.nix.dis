@@ -1,14 +1,24 @@
-{ self, inputs, ... }: {
-
-  flake.nixosModules.hyprland = { pkgs, lib, ... }: {
+{
+self,
+inputs,
+moduleWithSystem,
+...
+}: {
+  flake.nixosModules.hyprland = moduleWithSystem ({ 
+    pkgs, 
+    inputs',
+    self',
+    ... 
+  }: {
     programs.hyprland = {
+      enable = true;
       package = self.packages.${pkgs.stdenv.hostPlatform.system}.myHypr;
     };
-  };
+  )};
 
 
   perSystem = { pkgs, lib, self', ... }: {
-    packages.myHypr = inputs.wrapper-modules.wrappers.hyprland.wrap {
+    packages.myHypr = inputs'. {
       inherit pkgs;
       settings = {
 

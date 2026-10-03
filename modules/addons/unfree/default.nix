@@ -6,13 +6,14 @@
     flake.nixosModules.unfree = moduleWithSystem ({ 
       pkgs,
       unfreePkgs, 
+      unstPkgs,
       ... 
     }: {
     programs.localsend.enable = true;
 
-    environment.systemPackages = with unfreePkgs; [
-      obsidian
-      discord
+    environment.systemPackages = [
+      unfreePkgs.obsidian
+      unfreePkgs.discord
     ]; 
   });
 }

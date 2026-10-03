@@ -37,7 +37,7 @@
 		services.displayManager.sddm = {
 			enable = true;
 			autoNumlock = true;
-			theme = "sddm-black_hole-theme";
+			theme = "sddm-astronaut-theme";
 			extraPackages = [ pkgs.sddm-astronaut ];
 		};
 
@@ -52,6 +52,7 @@
 			packages = with pkgs; [
 				keepassxc
 				vscoduim
+				vesktop	
 			];
 		};
 	};

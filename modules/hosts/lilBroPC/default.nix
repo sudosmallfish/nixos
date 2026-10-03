@@ -8,7 +8,7 @@
 			amdDrivers
 			bottles
 			gaming
-			programming
+			programing
 			office
 			kitty
 			network

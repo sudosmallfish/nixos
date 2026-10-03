@@ -1,17 +1,14 @@
 {
-  inputs,
   moduleWithSystem,
   ...
 }: {
   flake.nixosModules.starship = moduleWithSystem ({
-    pkgs,
-    self',
     ...
   }: {
 
     programs.starship = {
       enable = true;
-      presets = [ "catppuccin-powerline" ];
+      presets = [ "nerd-font-symbols" "catppuccin-powerline" ];
     };
   });
 }

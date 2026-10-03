@@ -16,5 +16,6 @@
         unstPkgs.proton-ge-bin
       ];
     };
+    hardware.steam-hardware.enable = true;
   });
 }

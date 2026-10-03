@@ -56,7 +56,7 @@
 			extraGroups = [ "root" "wheel" ];
 			packages = with pkgs; [
 				keepassxc
-				vscoduim
+				vscodium
 				vesktop	
 			];
 		};

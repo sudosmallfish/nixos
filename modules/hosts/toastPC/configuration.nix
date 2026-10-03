@@ -59,6 +59,7 @@
 				vscodium
 				vesktop	
 				wireless-regdb
+				iw
 			];
 		};
 		networking.firewall = {

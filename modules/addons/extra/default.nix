@@ -9,6 +9,7 @@
     }: {
     programs.localsend.enable = true;
     programs.dms-shell.enableAudioWavelength = true;
+    programs.flatpak.enable = true;
 
     environment.systemPackages = with pkgs; [
       fastfetch
